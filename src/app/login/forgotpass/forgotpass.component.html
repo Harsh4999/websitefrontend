@@ -1,0 +1,13 @@
+<p>forgotpass works!</p>
+<div>
+  <form #form="ngForm" (ngSubmit)="setpass(form)">
+    <br>
+    <label for="rollno">Rollno</label>
+    <input type="text" name="rollno" ngModel>
+    <br>
+    <label for="password">New Password</label>
+    <input type="password" name="password" ngModel>
+    <br>
+    <button type="submit">submit</button>
+  </form>
+</div>

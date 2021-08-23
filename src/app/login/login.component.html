@@ -1,0 +1,16 @@
+<div>
+  <form #addForm="ngForm" (ngSubmit)="getVal(addForm)">
+    <label >Rollno</label>
+    <input type="text" name="rollno" ngModel>
+    <br>
+    <label >Password</label>
+    <input type="password" name="password" ngModel>
+    <br>
+    <button type="submit">submit</button>
+  </form>
+
+</div>
+<div *ngIf="view=='yes'">
+
+</div>
+<button (click)="forgotpass()">forgotpass</button>
