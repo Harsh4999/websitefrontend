@@ -14,11 +14,11 @@
           <form  #addForm="ngForm" (ngSubmit)="getVal(addForm)" >
             <div class="form-group">
               <label for="exampleInputEmail1">Roll-No</label>
-              <input type="text"  name="rollno" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter RollNo"ngModel>
+              <input type="text"  name="rollno" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter RollNo"required ngModel>
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Password</label>
-              <input type="password" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Password"ngModel>
+              <input type="password" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Password"required ngModel>
             </div>
 
             <button type="submit" class="btn btn-primary ml-5">Submit</button>
