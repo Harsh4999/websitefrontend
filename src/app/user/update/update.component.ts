@@ -27,6 +27,7 @@ export class UpdateComponent implements OnInit {
     this.update.updatedetails(this.stud).subscribe(
       (response:Student)=>{
         console.log(response);
+        this.router.navigate(['/user']);
       },
       (error)=>{
         console.log(error.message);

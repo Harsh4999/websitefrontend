@@ -7,8 +7,8 @@ import { Student } from '../student';
 })
 export class StudendaddingService {
   private d:number=-1;
-  private apiserverurl = 'http://localhost:8080/student/add'
-  //private apiserverurl= 'https://webappbackend.herokuapp.com/student/add'
+  //private apiserverurl = 'http://localhost:8080/student/add'
+  private apiserverurl= 'https://webappbackend.herokuapp.com/student/add'
  constructor(private http:HttpClient) { }
   public addStud(student:Student):Observable<Student>{
     console.log(student);

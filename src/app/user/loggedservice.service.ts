@@ -7,8 +7,8 @@ import { Student } from '../student';
 })
 export class LoggedserviceService {
   private stud!:Student;
-  private apiserverurl="http://localhost:8080/user/"
-  //private apiserverurl="https://webappbackend.herokuapp.com/user/";
+  //private apiserverurl="http://localhost:8080/user/"
+  private apiserverurl="https://webappbackend.herokuapp.com/user/";
   constructor(private http:HttpClient) { }
   public getData(rollno:number): Observable<Student>{
     return this.http.get<Student>(`${this.apiserverurl}${rollno}`);

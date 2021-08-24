@@ -7,7 +7,8 @@ import { Student } from 'src/app/student';
   providedIn: 'root'
 })
 export class UpdateserviceService {
-  private apiserverUrl="http://localhost:8080/user/update";
+  //private apiserverUrl="http://localhost:8080/user/update";
+  private apiserverUrl="https://webappbackend.herokuapp.com/user/update";
   constructor(private http:HttpClient) { }
   public updatedetails(student:Student):Observable<Student>{
     return this.http.post<Student>(this.apiserverUrl,student);
