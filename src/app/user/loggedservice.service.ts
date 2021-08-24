@@ -6,10 +6,17 @@ import { Student } from '../student';
   providedIn: 'root'
 })
 export class LoggedserviceService {
-  //private apiserverurl="http://localhost:8080/user/"
-  private apiserverurl="https://webappbackend.herokuapp.com/user/";
+  private stud!:Student;
+  private apiserverurl="http://localhost:8080/user/"
+  //private apiserverurl="https://webappbackend.herokuapp.com/user/";
   constructor(private http:HttpClient) { }
   public getData(rollno:number): Observable<Student>{
     return this.http.get<Student>(`${this.apiserverurl}${rollno}`);
+  }
+  getoption(){
+    return this.stud;
+  }
+  setoption(student:Student){
+    this.stud=student;
   }
 }

@@ -1,0 +1,16 @@
+
+<button (click)="goback()">Back</button>
+<div>
+  <form #addForm="ngForm" (ngSubmit)="updateDetails(addForm)">
+    <label >Name</label>
+    <input type="text" name="name" ngModel>
+    <br>
+    <label >Username</label>
+    <input type="text" name="username" ngModel>
+    <br>
+    <label >Password</label>
+    <input type="password" name="password" ngModel>
+    <br>
+    <button type="submit">submit</button>
+  </form>
+</div>

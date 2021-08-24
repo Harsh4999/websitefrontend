@@ -9,13 +9,15 @@ import { UserComponent } from './user/user.component';
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { ForgotpassComponent } from './login/forgotpass/forgotpass.component';
+import { UpdateComponent } from './user/update/update.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
     UserComponent,
-    ForgotpassComponent
+    ForgotpassComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

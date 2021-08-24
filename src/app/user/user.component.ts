@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, Routes } from '@angular/router';
 import { ValidationserviceService } from '../login/validationservice.service';
 import { StudendaddingService } from '../register/studendadding.service';
 import { Student } from '../student';
 import { LoggedserviceService } from './loggedservice.service';
-
+const routes: Routes = [
+  { path: 'update', redirectTo: '/src/app/user/update/update.component.html', pathMatch: 'full' }
+];
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -12,7 +15,7 @@ import { LoggedserviceService } from './loggedservice.service';
 export class UserComponent implements OnInit {
   public student!:Student;
   private d:number=-1;
-  constructor(private val:ValidationserviceService,private loged:LoggedserviceService,private reg:StudendaddingService) { }
+  constructor(private val:ValidationserviceService,private loged:LoggedserviceService,private reg:StudendaddingService,private router:Router) { }
 
   ngOnInit(): void {
     console.log("here");
@@ -34,5 +37,9 @@ export class UserComponent implements OnInit {
         console.log(error.message);
       }
     )
+  }
+  public updateDetails(){
+    this.loged.setoption(this.student);
+    this.router.navigate(['/update']);
   }
 }
